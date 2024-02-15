@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scientific calculator</title>
+ <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+  <script src="app.js"></script>
+<h1>Scientific Calculator by Devendra Mukati</h1>
+    <div class="container">
+      <div class="header">Calculator</div>
+      <input type="number" class="result" id="n1" placeholder="Enter number" value="0">
+      <div class="first-row">
+        <input type="button" name="" value="&radic;" class="global" onclick="squareRoot('sr')">
+        <input type="button" name="" value="x²" class="global" onclick="square('2')">
+        <input type="button" name="" value="x³" class="global" onclick="cube('3')">
+        <input type="button" name="" value="%" class="global" onclick="percent('p')">
+      </div>
+      <div class="first-row">
+        <input type="button" name="" value="x!" class="global" onclick="fact('f')">
+        <input type="button" name="" value="log" class="global" onclick="log1('l')">
+        <input type="button" name="" value="Exp" class="global" onclick="exp1('e')">
+        <input type="button" name="" value="x^y" class="global" onclick="pow1('pow1')">
+      </div>
+      <div class="second-row">
+        <input type="button" name="" value="7" class="global" onclick="one(7)">
+        <input type="button" name="" value="8" class="global" onclick="one(8)">
+        <input type="button" name="" value="9" class="global" onclick="one(9)">
+        <input type="button" name="" value="/" class="global" onclick="div('/')">
+      </div>
+      <div class="third-row">
+        <input type="button" name="" value="4" class="global" onclick="one(4)">
+        <input type="button" name="" value="5" class="global" onclick="one(5)">
+        <input type="button" name="" value="6" class="global" onclick="one(6)">
+        <input type="button" name="" value="X" class="global" onclick="mul('*')">
+      </div>
+      <div class="fourth-row">
+        <input type="button" name="" value="1" class="global" onclick="one(1)">
+        <input type="button" name="" value="2" class="global" onclick="one(2)">
+        <input type="button" name="" value="3" class="global" onclick="one(3)">
+        <input type="button" name="" value="-" class="global" onclick="sub('-')">
+      </div>
+      <div class="conflict">
+        <div class="left">
+          <input type="button" name="" value="0" class=" big" onclick="one(0)">
+          <input type="button" name="" value="." class=" small" onclick="dec('.')">
+          <input type="button" name="" value="Del" class=" red small white-text top-margin" onclick="clear1(0)">
+          <input type="button" name="" value="=" class=" green white-text big top-margin" onclick="result()">
+        </div>
+        <div class="right">
+          <input type="button" name="" value="+" class="global grey plus" onclick="add('+')">
+        </div>
+      </div>
+    </div>
+    <p id="r"></p>
+</body>
+</html>
+
