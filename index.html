@@ -1,58 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Scientific calculator</title>
- <link rel="stylesheet" href="style.css" >
+    <title>MCQ Test Maker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
 </head>
 <body>
-  <script src="app.js"></script>
-<h1>Scientific Calculator by Devendra Mukati</h1>
-    <div class="container">
-      <div class="header">Calculator</div>
-      <input type="number" class="result" id="n1" placeholder="Enter number" value="0">
-      <div class="first-row">
-        <input type="button" name="" value="&radic;" class="global" onclick="squareRoot('sr')">
-        <input type="button" name="" value="x²" class="global" onclick="square('2')">
-        <input type="button" name="" value="x³" class="global" onclick="cube('3')">
-        <input type="button" name="" value="%" class="global" onclick="percent('p')">
-      </div>
-      <div class="first-row">
-        <input type="button" name="" value="x!" class="global" onclick="fact('f')">
-        <input type="button" name="" value="log" class="global" onclick="log1('l')">
-        <input type="button" name="" value="Exp" class="global" onclick="exp1('e')">
-        <input type="button" name="" value="x^y" class="global" onclick="pow1('pow1')">
-      </div>
-      <div class="second-row">
-        <input type="button" name="" value="7" class="global" onclick="one(7)">
-        <input type="button" name="" value="8" class="global" onclick="one(8)">
-        <input type="button" name="" value="9" class="global" onclick="one(9)">
-        <input type="button" name="" value="/" class="global" onclick="div('/')">
-      </div>
-      <div class="third-row">
-        <input type="button" name="" value="4" class="global" onclick="one(4)">
-        <input type="button" name="" value="5" class="global" onclick="one(5)">
-        <input type="button" name="" value="6" class="global" onclick="one(6)">
-        <input type="button" name="" value="X" class="global" onclick="mul('*')">
-      </div>
-      <div class="fourth-row">
-        <input type="button" name="" value="1" class="global" onclick="one(1)">
-        <input type="button" name="" value="2" class="global" onclick="one(2)">
-        <input type="button" name="" value="3" class="global" onclick="one(3)">
-        <input type="button" name="" value="-" class="global" onclick="sub('-')">
-      </div>
-      <div class="conflict">
-        <div class="left">
-          <input type="button" name="" value="0" class=" big" onclick="one(0)">
-          <input type="button" name="" value="." class=" small" onclick="dec('.')">
-          <input type="button" name="" value="Del" class=" red small white-text top-margin" onclick="clear1(0)">
-          <input type="button" name="" value="=" class=" green white-text big top-margin" onclick="result()">
+    <div class="container-fluid main">
+        <br>
+        <div id="testBlock">
+            <h1>MCQ Test Maker</h1>
+        <br><br>
+        <input type="text" id="Q1" placeholder="Enter Question" class="input-Question"><br><br><br>
+        <input type="text" id="O1" placeholder="Option 1">
+        <input type="text" id="O2" placeholder="Option 2">
+        <input type="text" id="O3" placeholder="Option 3">
+        <input type="text" id="O4" placeholder="Option 4">
+        <button id="btnAdd" class="buttonadd">Add</button>
+        <button id="subTest" class="buttonadd">Submit</button>
         </div>
-        <div class="right">
-          <input type="button" name="" value="+" class="global grey plus" onclick="add('+')">
-        </div>
+        
+      <div id="details">
+        <h3>Enter Institute Name</h3>
+        <input type="text" id="institute-Name" placeholder="Enter Instutute Name"><br><br>
+        <input type="text" id="Sub" placeholder="Enter Subject Name"><br><br>
+        <input type="text" id="Time" placeholder="Enter Time"><br><br>
+        <button id="btnSub">Submit Details</button>
       </div>
+        <br>
+        <h1 id="ins-name" style="text-align: center;"></h1>
+        <h2 id="ins-sub" style="text-align: center;"></h2>
+        <h4 id="ins-time" style="text-align: right;"></h4><br>
+        <br><br>
+        <ol>
+            <h4 id="question-heading1"></h4>
+            <li id="option1-1"></li>
+            <li id="option1-2"></li>
+            <li id="option1-3"></li>
+            <li id="option1-4"></li>
+<br><br>
+            <h4 id="question-heading2"></h4>
+            <li id="option2-1"></li>
+            <li id="option2-2"></li>
+            <li id="option2-3"></li>
+            <li id="option2-4"></li>
+<br><br>            
+            <h4 id="question-heading3"></h4>
+            <li id="option3-1"></li>
+            <li id="option3-2"></li>
+            <li id="option3-3"></li>
+            <li id="option3-4"></li>
+<br><br>
+            <h4 id="question-heading4"></h4>
+            <li id="option4-1"></li>
+            <li id="option4-2"></li>
+            <li id="option4-3"></li>
+            <li id="option4-4"></li>
+<br><br>
+            <h4 id="question-heading5"></h4>
+            <li id="option5-1"></li>
+            <li id="option5-2"></li>
+            <li id="option5-3"></li>
+            <li id="option5-4"></li>
+<br><br>
+            <h4 id="question-heading6"></h4>
+            <li id="option6-1"></li>
+            <li id="option6-2"></li>
+            <li id="option6-3"></li>
+            <li id="option6-4"></li>
+<br><br>
+            <h4 id="question-heading7"></h4>
+            <li id="option7-1"></li>
+            <li id="option7-2"></li>
+            <li id="option7-3"></li>
+            <li id="option7-4"></li>
+<br><br>
+            <h4 id="question-heading8"></h4>
+            <li id="option8-1"></li>
+            <li id="option8-2"></li>
+            <li id="option8-3"></li>
+            <li id="option8-4"></li>
+<br><br>
+            <h4 id="question-heading9"></h4>
+            <li id="option9-1"></li>
+            <li id="option9-2"></li>
+            <li id="option9-3"></li>
+            <li id="option9-4"></li>
+<br><br>
+            <h4 id="question-heading10"></h4>
+            <li id="option10-1"></li>
+            <li id="option10-2"></li>
+            <li id="option10-3"></li>
+            <li id="option10-4"></li>
+<br><br>
+            <h4 id="question-heading11"></h4>
+            <li id="option11-1"></li>
+            <li id="option11-2"></li>
+            <li id="option11-3"></li>
+            <li id="option11-4"></li>
+<br><br>
+            <h4 id="question-heading12"></h4>
+            <li id="option12-1"></li>
+            <li id="option12-2"></li>
+            <li id="option12-3"></li>
+            <li id="option12-4"></li>
+<br><br>
+            <h4 id="question-heading13"></h4>
+            <li id="option13-1"></li>
+            <li id="option13-2"></li>
+            <li id="option13-3"></li>
+            <li id="option13-4"></li>
+<br><br>
+            <h4 id="question-heading14"></h4>
+            <li id="option14-1"></li>
+            <li id="option14-2"></li>
+            <li id="option14-3"></li>
+            <li id="option14-4"></li>
+<br><br>
+            <h4 id="question-heading15"></h4>
+            <li id="option15-1"></li>
+            <li id="option15-2"></li>
+            <li id="option15-3"></li>
+            <li id="option15-4"></li>
+<br><br>
+            <h4 id="question-heading16"></h4>
+            <li id="option16-1"></li>
+            <li id="option16-2"></li>
+            <li id="option16-3"></li>
+            <li id="option16-4"></li>
+<br><br>
+            <h4 id="question-heading17"></h4>
+            <li id="option17-1"></li>
+            <li id="option17-2"></li>
+            <li id="option17-3"></li>
+            <li id="option17-4"></li>
+<br><br>
+            <h4 id="question-heading18"></h4>
+            <li id="option18-1"></li>
+            <li id="option18-2"></li>
+            <li id="option18-3"></li>
+            <li id="option18-4"></li>
+<br><br>
+            <h4 id="question-heading19"></h4>
+            <li id="option19-1"></li>
+            <li id="option19-2"></li>
+            <li id="option19-3"></li>
+            <li id="option19-4"></li>
+<br><br>
+            <h4 id="question-heading20"></h4>
+            <li id="option20-1"></li>
+            <li id="option20-2"></li>
+            <li id="option20-3"></li>
+            <li id="option20-4"></li>
+<br><br>
+
+
+        </ol>
     </div>
-    <p id="r"></p>
+    
 </body>
 </html>
-
